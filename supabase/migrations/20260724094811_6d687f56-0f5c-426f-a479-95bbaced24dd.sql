@@ -1,0 +1,2 @@
+CREATE POLICY "No one can delete orders" ON public.orders AS RESTRICTIVE FOR DELETE TO authenticated, anon USING (false);
+CREATE POLICY "No one can insert profiles" ON public.profiles AS RESTRICTIVE FOR INSERT TO authenticated, anon WITH CHECK (false);
